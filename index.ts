@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const TARGET_URL = "https://insightai-cojq.onrender.com/";
+const TARGET_URL = "https://insight-ai-y31r.onrender.com/";
 const PING_INTERVAL = 60000; // 60 seconds
 
 console.log(
   `Ping server started. Will ping ${TARGET_URL} every ${
     PING_INTERVAL / 1000
-  } seconds.`
+  } seconds.`,
 );
 
 const pingServer = async () => {
@@ -15,16 +15,16 @@ const pingServer = async () => {
     console.log(
       `[${new Date().toISOString()}] Ping successful - Status: ${
         response.status
-      }`
+      }`,
     );
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error(
-        `[${new Date().toISOString()}] Ping failed - ${error.message}`
+        `[${new Date().toISOString()}] Ping failed - ${error.message}`,
       );
     } else {
       console.error(
-        `[${new Date().toISOString()}] Ping failed - Unknown error`
+        `[${new Date().toISOString()}] Ping failed - Unknown error`,
       );
     }
   }
